@@ -4,9 +4,9 @@ def nb_year(p0, percent, aug, p):
     while True:
         p_next = int(p_current + p_current * percent / 100 + aug)
         year_counter += 1
+        p_current = p_next
         if p_next >= p:
             return year_counter
-        p_current = p_next
 
 
 if __name__ == '__main__':
